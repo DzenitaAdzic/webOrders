@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RestoranMeniController">
+   <children>
+      <GridPane layoutX="57.0" layoutY="90.0" prefHeight="198.0" prefWidth="405.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="219.0" minWidth="10.0" prefWidth="78.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="339.0" minWidth="10.0" prefWidth="339.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Naziv:" />
+            <Label text="Jedinica:" GridPane.rowIndex="1" />
+            <Label text="Kolicina:" GridPane.rowIndex="2" />
+            <TextField fx:id="txtNazivJela" GridPane.columnIndex="1" />
+            <TextField fx:id="txtJedinicaJela" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txtKolicinaJela" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <HBox alignment="CENTER" layoutY="2.0" prefHeight="80.0" prefWidth="504.0">
+         <children>
+            <Label text="Unesite opis jela">
+               <font>
+                  <Font name="System Bold Italic" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Button fx:id="btnDodajJelo" layoutX="252.0" layoutY="384.0" mnemonicParsing="false" onAction="#dodajJeloUbazu" prefHeight="47.0" prefWidth="124.0" text="Dodaj jelo" />
+      <Label fx:id="lblDodajJeloGreska" layoutX="57.0" layoutY="318.0" prefHeight="32.0" prefWidth="405.0" textFill="#eb1515" />
+   </children>
+</AnchorPane>

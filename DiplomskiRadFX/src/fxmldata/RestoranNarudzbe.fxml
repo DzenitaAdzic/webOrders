@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="805.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RestoranNarudzbeController">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tableViewNarudzbe" layoutX="58.0" layoutY="84.0" prefHeight="463.0" prefWidth="526.0">
+              <columns>
+                <TableColumn prefWidth="75.0" text="Firma">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="firmaNaziv" />
+                     </cellValueFactory>
+                  </TableColumn>
+                <TableColumn prefWidth="75.0" text="Zaposlenik">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="ime" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="110.0" text="Naziv jela">
+                       <cellValueFactory>
+                        <PropertyValueFactory property="jeloNaziv" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="54.0" text="Kolicina">
+                       <cellValueFactory>
+                        <PropertyValueFactory property="kolicina" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="61.0" text="Cijena">
+                       <cellValueFactory>
+                        <PropertyValueFactory property="cijena" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="150.0" text="Dodatni zahtjev">
+                       <cellValueFactory>
+                        <PropertyValueFactory property="dodatniZahtjev" />
+                     </cellValueFactory>
+                  </TableColumn>
+              </columns>
+            </TableView>
+            <Label layoutX="61.0" layoutY="8.0" prefHeight="48.0" prefWidth="256.0" text="Pristigle narudzbe">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnDodaj" layoutX="619.0" layoutY="155.0" mnemonicParsing="false" onAction="#btnDodajHandler" prefHeight="60.0" prefWidth="170.0" text="Dodaj u zavrsene narudzbe" />
+            <Button fx:id="btnPregledaj" layoutX="620.0" layoutY="227.0" mnemonicParsing="false" onAction="#btnPregledajHandler" prefHeight="60.0" prefWidth="170.0" text="Pregledaj zavrsene narudzbe" />
+            <Button fx:id="btnIzbrisi" layoutX="620.0" layoutY="303.0" mnemonicParsing="false" onAction="#btnIzbrisiHandler" prefHeight="60.0" prefWidth="170.0" text="Izbrisi zavrsene narudzbe" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

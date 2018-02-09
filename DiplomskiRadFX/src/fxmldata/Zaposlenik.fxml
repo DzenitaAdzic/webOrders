@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="634.0" prefWidth="1055.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ZaposlenikController">
+   <left>
+      <VBox prefHeight="456.0" prefWidth="156.0" style="-fx-background-color: #461306;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="lblUsername" text="Label" textFill="#ddd8d8">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <VBox prefHeight="200.0" prefWidth="110.0">
+               <children>
+                  <Button fx:id="btnGlasaj" alignment="TOP_LEFT" mnemonicParsing="false" onMouseClicked="#glasajClicked" onMouseEntered="#glasajMouseEntered" onMouseExited="#glasajMouseExited" prefHeight="25.0" prefWidth="122.0" style="-fx-background-color: #461306;" text="Glasaj" textFill="#ddd8d8">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnDnevnaPonuda" alignment="TOP_LEFT" mnemonicParsing="false" onMouseClicked="#dnevnaPonudaClicked" onMouseEntered="#dnevnaPonudaEntered" onMouseExited="#dnevnaPonudaExited" prefHeight="31.0" prefWidth="127.0" style="-fx-background-color: #461306;" text="Dnevna ponuda" textFill="#ddd8d8">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets left="5.0" top="20.0" />
+               </padding>
+            </VBox>
+         </children>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </VBox>
+   </left>
+   <top>
+      <HBox alignment="CENTER_LEFT" prefHeight="37.0" prefWidth="716.0" style="-fx-background-color: #461306;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="37.0" prefWidth="589.0">
+               <children>
+                  <Label fx:id="lblImePrezime" prefHeight="59.0" prefWidth="310.0" text="Label" textFill="#ddd8d8">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+            <Button fx:id="btnOdjaviSe" alignment="TOP_RIGHT" mnemonicParsing="false" onAction="#odjaviSeAction" onMouseEntered="#odjaviSeEntered" onMouseExited="#odjaviSeExited" prefHeight="29.0" prefWidth="510.0" style="-fx-background-color: #461306;" text="Odjavi se" textFill="#ddd8d8">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets right="10.0" />
+         </padding>
+      </HBox>
+   </top>
+</BorderPane>

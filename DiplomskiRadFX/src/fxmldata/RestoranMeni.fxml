@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="602.0" prefWidth="915.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RestoranMeniController">
+   <center>
+      <SplitPane dividerPositions="0.4280397022332506" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="516.0" prefWidth="192.0">
+               <children>
+                  <TableView fx:id="tableViewJela" layoutX="32.0" layoutY="51.0" prefHeight="361.0" prefWidth="325.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn prefWidth="49.0" text="id">
+                           <cellValueFactory>
+                  <PropertyValueFactory property="jeloId" />
+               </cellValueFactory>
+            </TableColumn>
+                        <TableColumn prefWidth="146.0" text="Naziv">
+                             <cellValueFactory>
+                  <PropertyValueFactory property="naziv" />
+               </cellValueFactory>
+            </TableColumn>
+                        <TableColumn prefWidth="78.0" text="Jedinica">
+                           <cellValueFactory>
+                              <PropertyValueFactory property="jedinica" />
+                           </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn prefWidth="97.0" text="kolicina">
+                           <cellValueFactory>
+                              <PropertyValueFactory property="kolicina" />
+                           </cellValueFactory>
+                        </TableColumn>
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="439.0" prefWidth="512.0">
+               <children>
+                  <TableView fx:id="tableViewMeni" layoutX="152.0" prefHeight="518.0" prefWidth="306.0">
+                    <columns>
+                      <TableColumn prefWidth="59.0" text="id">
+                          <cellValueFactory>
+                  <PropertyValueFactory property="jeloId" />
+               </cellValueFactory>
+            </TableColumn>
+                      <TableColumn prefWidth="245.0" text="naziv">
+                          <cellValueFactory>
+                  <PropertyValueFactory property="naziv" />
+               </cellValueFactory>
+            </TableColumn>
+                    </columns>
+                  </TableView>
+                  <Button fx:id="btnDodajNaMeni" layoutX="51.0" layoutY="151.0" mnemonicParsing="false" onAction="#btnDodajNaMeniHandler" prefHeight="30.0" prefWidth="70.0" text="&gt;&gt;" textAlignment="CENTER" />
+                  <Button fx:id="btnIzbrisi" layoutX="51.0" layoutY="208.0" mnemonicParsing="false" onAction="#btnIDeleteFromMeniHandler" prefHeight="30.0" prefWidth="70.0" text="&lt;&lt;" textAlignment="CENTER" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </center>
+   <padding>
+      <Insets bottom="5.0" left="20.0" />
+   </padding>
+   <top>
+      <HBox alignment="CENTER_LEFT" prefHeight="47.0" prefWidth="876.0" spacing="400.0" BorderPane.alignment="TOP_CENTER">
+         <children>
+            <Label prefHeight="17.0" prefWidth="157.0" text="Jela u bazi:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="226.0" text="Meni:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+   <bottom>
+      <Pane prefHeight="109.0" prefWidth="876.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="txtSearch" layoutY="18.0" onAction="#search" prefHeight="25.0" prefWidth="295.0" promptText="Trazi">
+               <padding>
+                  <Insets left="10.0" right="20.0" />
+               </padding>
+            </TextField>
+            <Button fx:id="btnSearch" layoutX="309.0" layoutY="16.0" mnemonicParsing="false" onAction="#search" prefHeight="30.0" prefWidth="70.0" text="Trazi" />
+            <Button fx:id="btnDodajUbazu" layoutY="55.0" mnemonicParsing="false" onAction="#dodajUbazu" prefHeight="40.0" prefWidth="120.0" text="Dodaj u bazu" />
+         </children>
+      </Pane>
+   </bottom>
+</BorderPane>

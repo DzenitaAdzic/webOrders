@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="536.0" prefWidth="669.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RestoranDnevnaPonudaController">
+   <children>
+      <Label layoutX="32.0" layoutY="34.0" prefHeight="26.0" prefWidth="264.0" text="Izaberite firmu kojoj zelite poslati dnevnu ponudu" />
+      <TableView fx:id="tableViewFirme" layoutX="32.0" layoutY="109.0" prefHeight="277.0" prefWidth="620.0">
+        <columns>
+          <TableColumn prefWidth="44.0" text="Id">
+               <cellValueFactory>
+                        <PropertyValueFactory property="firmaId" />
+                     </cellValueFactory>
+                  </TableColumn>
+          <TableColumn prefWidth="106.0" text="Naziv">
+               <cellValueFactory>
+                        <PropertyValueFactory property="naziv" />
+                     </cellValueFactory>
+                  </TableColumn>
+            <TableColumn prefWidth="75.0" text="Adresa">
+                 <cellValueFactory>
+                        <PropertyValueFactory property="adresa" />
+                     </cellValueFactory>
+                  </TableColumn>
+            <TableColumn prefWidth="120.0" text="Broj telefona">
+                 <cellValueFactory>
+                        <PropertyValueFactory property="brojTelefona" />
+                     </cellValueFactory>
+                  </TableColumn>
+            <TableColumn prefWidth="109.0" text="brFax">
+                 <cellValueFactory>
+                        <PropertyValueFactory property="brFax" />
+                     </cellValueFactory>
+                  </TableColumn>
+            <TableColumn prefWidth="165.0" text="Email">
+                 <cellValueFactory>
+                        <PropertyValueFactory property="email" />
+                     </cellValueFactory>
+                  </TableColumn>
+        </columns>
+      </TableView>
+      <Button fx:id="btnPosalji" layoutX="32.0" layoutY="452.0" mnemonicParsing="false" onAction="#btnPosaljiAction" text="Posalji" />
+   </children>
+</AnchorPane>

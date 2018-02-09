@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="588.0" prefWidth="989.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RestoranDnevnaPonudaController">
+   <center>
+      <AnchorPane prefHeight="505.0" prefWidth="802.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" layoutX="28.0" layoutY="4.0" prefHeight="460.0" prefWidth="802.0" spacing="30.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <TableView fx:id="tableViewMeni" prefHeight="530.0" prefWidth="317.0">
+                    <columns>
+                      <TableColumn prefWidth="40.0" text="id">
+                          <cellValueFactory>
+                        <PropertyValueFactory property="jeloId" />
+                     </cellValueFactory>
+                  </TableColumn>
+                      <TableColumn prefWidth="130.0" text="naziv">
+                          <cellValueFactory>
+                        <PropertyValueFactory property="naziv" />
+                     </cellValueFactory>
+                  </TableColumn>
+                        <TableColumn prefWidth="55.0" text="jedinica">
+                            <cellValueFactory>
+                        <PropertyValueFactory property="jedinica" />
+                     </cellValueFactory>
+                  </TableColumn>
+                        <TableColumn prefWidth="89.0" text="kolicina">
+                            <cellValueFactory>
+                        <PropertyValueFactory property="kolicina" />
+                     </cellValueFactory>
+                  </TableColumn>
+                    </columns>
+                  </TableView>
+                  <VBox alignment="CENTER" prefHeight="530.0" prefWidth="73.0" spacing="30.0">
+                     <children>
+                        <Button fx:id="btnDodajNaPonudu" mnemonicParsing="false" onAction="#btnDodajNaPonuduHandler" prefHeight="25.0" prefWidth="92.0" text="&gt;&gt;" />
+                        <Button fx:id="btnIzbrisi" mnemonicParsing="false" onAction="#btnIzbrisiAction" prefHeight="25.0" prefWidth="92.0" text="&lt;&lt;" />
+                     </children>
+                  </VBox>
+                  <TableView fx:id="tableViewDnevnaPonuda" prefHeight="530.0" prefWidth="325.0">
+                    <columns>
+                      <TableColumn editable="false" prefWidth="39.0" text="id">
+                          <cellValueFactory>
+                        <PropertyValueFactory property="jeloId" />
+                     </cellValueFactory>
+                  </TableColumn>
+                      <TableColumn editable="false" prefWidth="100.0" text="naziv">
+                          <cellValueFactory>
+                        <PropertyValueFactory property="naziv" />
+                     </cellValueFactory>
+                  </TableColumn>
+                        <TableColumn editable="false" prefWidth="59.0" text="jedinica">
+                            <cellValueFactory>
+                        <PropertyValueFactory property="jedinica" />
+                     </cellValueFactory>
+                  </TableColumn>
+                        <TableColumn editable="false" prefWidth="59.0" text="kolicina">
+                            <cellValueFactory>
+                        <PropertyValueFactory property="kolicina" />
+                     </cellValueFactory>
+                  </TableColumn>
+                        <TableColumn fx:id="cijenaColumn" prefWidth="64.0" style="-fx-background-color: #e03a10;" text="cijena" />
+                    </columns>
+                  </TableView>
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+         </BorderPane.margin></AnchorPane>
+   </center>
+   <right>
+      <VBox alignment="CENTER_LEFT" prefHeight="507.0" prefWidth="157.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets left="20.0" />
+         </BorderPane.margin>
+         <children>
+            <Button fx:id="btnPosaljiDP" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#btnPosaljiDnevnuPonudu" prefHeight="62.0" prefWidth="150.0" text="Posalji dnevnu ponudu" />
+         </children>
+      </VBox>
+   </right>
+   <top>
+      <AnchorPane prefHeight="53.0" prefWidth="989.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="148.0" layoutY="18.0" text="Meni:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="551.0" layoutY="18.0" prefHeight="25.0" prefWidth="223.0" text="Dnevna ponuda:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>
